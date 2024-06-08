@@ -18,20 +18,18 @@
                 },
                 "rules": [
                     {
-                        "conditions": [
-                            {
-                                "identifiers": [
-                                    {
-                                        "vendor_id": 1452
-                                    }
-                                ],
-                                "type": "device_if"
-                            }
-                        ],
                         "description": "[Mac]Tab functions",
                         "manipulators": [
                             {
                                 "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    },
                                     {
                                         "name": "hyper_sublayer_b",
                                         "type": "variable_if",
@@ -345,6 +343,16 @@
                         "description": "[Mac]Hyper Key (⌃⌥⇧⌘)",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "Spacebar -> Hyper Variable & Meh",
                                 "from": {
                                     "key_code": "spacebar",
