@@ -1,0 +1,1 @@
+{"title":"Test title","rules":[{"description":"Test","manipulators":[{"type":"basic","from":{"modifiers":{"mandatory":["left_gui"]},"key_code":"right_gui"},"to":[{"repeat":false,"key_code":"delete_or_backspace","modifiers":["left_control"]}]}]}]}
