@@ -5,7 +5,488 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "[Mac]Tab functions",
+                        "description": "[MAC]Hyper Key sublayer \"z\", for Arc tab control",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "description": "Toggle Hyper sublayer z",
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 400,
+                                    "basic.to_if_held_down_threshold_milliseconds": 400
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_z",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "z" }],
+                                "to_if_held_down": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_z",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["left_shift", "left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": ["left_shift", "left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_control", "left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_control", "left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Move to Space 1 in Arc",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": ["left_control", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "[MAC]Hyper Key sublayer \"w\", for Raycast Window-Management",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "description": "Toggle Hyper sublayer w",
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 400,
+                                    "basic.to_if_held_down_threshold_milliseconds": 400
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_w",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "w" }],
+                                "to_if_held_down": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_w",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Raycast Window: maximize",
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/maximize" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: center",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/center" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Raycast Window: next-display",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/previous-display" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Raycast Window: left half",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/left-half" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Raycast Window: right half",
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/right-half" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: top left corner",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/top-left-quarter" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: bottom right corner",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-left-quarter" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: top right corner",
+                                "from": {
+                                    "key_code": "y",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/top-right-quarter" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: bottom right corner",
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-right-quarter" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: move left",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/move-left" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: move right",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/move-right" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: move up",
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/move-up" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_w",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Window: move down",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -g raycast://extensions/raycast/window-management/move-down" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "[MAC]combos",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "description": "f+r to Enter",
+                                "from": {
+                                    "simultaneous": [
+                                        { "key_code": "f" },
+                                        { "key_code": "r" }
+                                    ],
+                                    "simultaneous_options": {
+                                        "detect_key_down_uninterruptedly": true,
+                                        "key_down_order": "insensitive",
+                                        "key_up_order": "insensitive",
+                                        "key_up_when": "any"
+                                    }
+                                },
+                                "to": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "description": "n+j to raycast",
+                                "from": {
+                                    "simultaneous": [
+                                        { "key_code": "j" },
+                                        { "key_code": "n" }
+                                    ],
+                                    "simultaneous_options": {
+                                        "detect_key_down_uninterruptedly": true,
+                                        "key_down_order": "insensitive",
+                                        "key_up_order": "insensitive",
+                                        "key_up_when": "any"
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "[Mac]q functions",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -20,7 +501,6 @@
                                     {
                                         "name": "hyper_sublayer_b",
                                         "type": "variable_if",
-                                        
                                         "value": 0
                                     },
                                     {
@@ -51,7 +531,7 @@
                                 ],
                                 "description": "Toggle Hyper sublayer v",
                                 "from": {
-                                    "key_code": "tab",
+                                    "key_code": "q",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": {
@@ -61,16 +541,16 @@
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
-                                            "name": "hyper_sublayer_v",
+                                            "name": "hyper_sublayer_q",
                                             "value": 0
                                         }
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "tab" }],
+                                "to_if_alone": [{ "key_code": "q" }],
                                 "to_if_held_down": [
                                     {
                                         "set_variable": {
-                                            "name": "hyper_sublayer_v",
+                                            "name": "hyper_sublayer_q",
                                             "value": 1
                                         }
                                     }
@@ -80,7 +560,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -95,7 +575,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -110,7 +590,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -125,7 +605,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -140,7 +620,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -155,7 +635,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -175,7 +655,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -195,7 +675,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -215,7 +695,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -230,7 +710,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hyper_sublayer_v",
+                                        "name": "hyper_sublayer_q",
                                         "type": "variable_if",
                                         "value": 1
                                     }
@@ -351,259 +831,6 @@
                                         "modifiers": ["left_shift", "left_command", "left_option"]
                                     }
                                 ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "[Mac]homerow mod",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "f",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "left_command" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "f" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "j",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "right_command" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "j" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "d",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "left_control" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "d" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "k",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "right_control" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "k" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "s",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "left_option" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "s" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "l",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "right_option" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "l" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "a",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "left_shift" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "a" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1452 },
-                                            { "vendor_id": 76 },
-                                            { "is_built_in_keyboard": true }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "semicolon",
-                                        "halt": true
-                                    }
-                                ],
-                                "to_if_held_down": [{ "key_code": "right_shift" }],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [{ "key_code": "semicolon" }]
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 250
-                                },
                                 "type": "basic"
                             }
                         ]
@@ -1382,6 +1609,243 @@
                                         "modifiers": ["left_control", "left_option"]
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "[Mac]homerow mod",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "f" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "f"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "left_command" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "j" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "j"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "right_command" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "d" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "d"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "k" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "k"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "right_control" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "s" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "s"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "left_option" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "l" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "l"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "right_option" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "a" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "a"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "left_shift" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            { "vendor_id": 1452 },
+                                            { "vendor_id": 76 },
+                                            { "is_built_in_keyboard": true }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "semicolon" }] },
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "semicolon"
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "right_shift" }],
                                 "type": "basic"
                             }
                         ]
