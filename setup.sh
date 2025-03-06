@@ -2,7 +2,7 @@
 
 # Define the target and symlink name
 TARGET="$(pwd)/karabiner"
-SYMLINK="karabiner"
+SYMLINK="$HOME/.config/karabiner"
 
 # Check if the symlink or directory exists
 if [ -e "$SYMLINK" ]; then
