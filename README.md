@@ -11,3 +11,7 @@ with the above setup, mac keyboard and coner in karabiner (all device):
 - left_option -> left_control
 - left_control -> left_option
 
+---
+
+to use `setup.sh`, need to enable full disk access for `karabiner_grabber`.  
+https://github.com/pqrs-org/Karabiner-Elements/issues/3051  
