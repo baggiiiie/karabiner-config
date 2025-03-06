@@ -348,21 +348,20 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 300,
-                                    "basic.to_if_held_down_threshold_milliseconds": 300
+                                    "basic.to_delayed_action_delay_milliseconds": 200,
+                                    "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
-                                "to_after_key_up": [
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "w" }] },
+                                "to_if_alone": [
                                     {
-                                        "set_variable": {
-                                            "name": "hyper_sublayer_w",
-                                            "value": 0
-                                        }
+                                        "halt": true,
+                                        "key_code": "w"
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "w" }],
                                 "to_if_held_down": [
                                     {
                                         "set_variable": {
+                                            "key_up_value": 0,
                                             "name": "hyper_sublayer_w",
                                             "value": 1
                                         }
@@ -752,33 +751,33 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Toggle Hyper sublayer v",
+                                "description": "Toggle Hyper sublayer q",
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 100,
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
+                                    "basic.to_delayed_action_delay_milliseconds": 200,
+                                    "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
-                                "to_after_key_up": [
+                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "q" }] },
+                                "to_if_alone": [
                                     {
-                                        "set_variable": {
-                                            "name": "hyper_sublayer_q",
-                                            "value": 0
-                                        }
+                                        "halt": true,
+                                        "key_code": "q"
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "q" }],
                                 "to_if_held_down": [
                                     {
                                         "set_variable": {
+                                            "key_up_value": 0,
                                             "name": "hyper_sublayer_q",
                                             "value": 1
                                         }
                                     }
                                 ],
                                 "type": "basic"
+
                             },
                             {
                                 "conditions": [
