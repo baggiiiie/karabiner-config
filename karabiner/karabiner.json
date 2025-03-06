@@ -34,8 +34,8 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 400,
-                                    "basic.to_if_held_down_threshold_milliseconds": 400
+                                    "basic.to_if_alone_timeout_milliseconds": 300,
+                                    "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
                                 "to_after_key_up": [
                                     {
@@ -189,8 +189,8 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 400,
-                                    "basic.to_if_held_down_threshold_milliseconds": 400
+                                    "basic.to_if_alone_timeout_milliseconds": 300,
+                                    "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
                                 "to_after_key_up": [
                                     {
