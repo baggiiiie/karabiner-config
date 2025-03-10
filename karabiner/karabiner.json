@@ -240,19 +240,54 @@
                                 "conditions": [{
                                     "identifiers": [{
                                             "vendor_id": 1452
+                                "description": "zx to copy",
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "x"
                                         },
                                         {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
+                                            "key_code": "z"
                                         }
                                     ],
-                                    "type": "device_if"
-                                }],
-                                "description": "xc to copy",
+                                    "simultaneous_options": {
+                                        "detect_key_down_uninterruptedly": true,
+                                        "key_down_order": "insensitive",
+                                        "key_up_order": "insensitive",
+                                        "key_up_when": "any"
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "description": "xc to paste",
                                 "from": {
-                                    "simultaneous": [{
+                                    "simultaneous": [
+                                        {
                                             "key_code": "x"
                                         },
                                         {
@@ -266,46 +301,14 @@
                                         "key_up_when": "any"
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "c",
-                                    "modifiers": ["left_command"]
-                                }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
-                                "description": "cv to paste",
-                                "from": {
-                                    "simultaneous": [{
-                                            "key_code": "v"
-                                        },
-                                        {
-                                            "key_code": "c"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "detect_key_down_uninterruptedly": true,
-                                        "key_down_order": "insensitive",
-                                        "key_up_order": "insensitive",
-                                        "key_up_when": "any"
+                                "to": [
+                                    {
+                                        "key_code": "v",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
-                                },
-                                "to": [{
-                                    "key_code": "v",
-                                    "modifiers": ["left_command"]
-                                }],
+                                ],
                                 "type": "basic"
                             }
                         ]
