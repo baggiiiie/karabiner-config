@@ -28,7 +28,7 @@
                         ]
                     },
                     {
-                        "description": "[Mac]Hyper Key sublayer \"z\", for Arc tab control",
+                        "description": "[MAC]Hyper Key sublayer \"z\", for Arc tab control",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -222,7 +222,7 @@
                         ]
                     },
                     {
-                        "description": "[Mac]combos",
+                        "description": "[MAC]combos",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -727,10 +727,6 @@
                                         ]
                                     }
                                 },
-                                "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 150
-                                },
                                 "to_delayed_action": {
                                     "to_if_canceled": [
                                         {
@@ -760,6 +756,10 @@
                                         ]
                                     }
                                 ],
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 200,
+                                    "basic.to_if_held_down_threshold_milliseconds": 150
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -1134,7 +1134,7 @@
                         ]
                     },
                     {
-                        "description": "[Mac]Hyper Key sublayer \"w\", for Raycast Window-Management",
+                        "description": "[MAC]Hyper Key sublayer \"w\", for Raycast Window-Management",
                         "manipulators": [
                             {
                                 "conditions": [
