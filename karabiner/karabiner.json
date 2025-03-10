@@ -2,7 +2,8 @@
     "global": {
         "show_in_menu_bar": false
     },
-    "profiles": [{
+    "profiles": [
+        {
             "complex_modifications": {
                 "rules": [
                     {
@@ -28,160 +29,222 @@
                     },
                     {
                         "description": "[MAC]Hyper Key sublayer \"z\", for Arc tab control",
-                        "manipulators": [{
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "Toggle Hyper sublayer z",
                                 "from": {
                                     "key_code": "z",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
                                     "basic.to_if_alone_timeout_milliseconds": 300,
                                     "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
-                                "to_after_key_up": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_z",
-                                        "value": 0
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_z",
+                                            "value": 0
+                                        }
                                     }
-                                }],
-                                "to_if_alone": [{
-                                    "key_code": "z"
-                                }],
-                                "to_if_held_down": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_z",
-                                        "value": 1
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "z"
                                     }
-                                }],
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_z",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "open_bracket",
-                                    "modifiers": ["left_shift", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "close_bracket",
-                                    "modifiers": ["left_shift", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "left_arrow",
-                                    "modifiers": ["left_control", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "right_arrow",
-                                    "modifiers": ["left_control", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Move to Space 1 in Arc",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "1",
-                                    "modifiers": ["left_control", "left_option"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "[MAC]combos",
-                        "manipulators": [{
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "f+r to Enter",
                                 "from": {
-                                    "simultaneous": [{
+                                    "simultaneous": [
+                                        {
                                             "key_code": "f"
                                         },
                                         {
@@ -195,28 +258,34 @@
                                         "key_up_when": "any"
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "return_or_enter"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "n+j to raycast",
                                 "from": {
-                                    "simultaneous": [{
+                                    "simultaneous": [
+                                        {
                                             "key_code": "j"
                                         },
                                         {
@@ -230,16 +299,33 @@
                                         "key_up_when": "any"
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "spacebar",
-                                    "modifiers": ["left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "zx to copy",
                                 "from": {
                                     "simultaneous": [
@@ -315,25 +401,31 @@
                     },
                     {
                         "description": "[Mac]q functions",
-                        "manipulators": [{
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "Toggle Hyper sublayer q",
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -341,398 +433,539 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "q"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "q"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "q"
-                                }],
-                                "to_if_held_down": [{
-                                    "set_variable": {
-                                        "key_up_value": 0,
-                                        "name": "hyper_sublayer_q",
-                                        "value": 1
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "q"
                                     }
-                                }],
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "set_variable": {
+                                            "key_up_value": 0,
+                                            "name": "hyper_sublayer_q",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "return_or_enter"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "left_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "down_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "up_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "right_arrow"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "f",
-                                    "modifiers": ["right_control"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "f",
+                                        "modifiers": [
+                                            "right_control"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "j",
-                                    "modifiers": ["right_control"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "j",
+                                        "modifiers": [
+                                            "right_control"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "d",
-                                    "modifiers": ["right_shift", "right_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "d",
+                                        "modifiers": [
+                                            "right_shift",
+                                            "right_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "page_down"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "page_down"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_q",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_q",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "page_up"
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "page_up"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "[Mac]Hyper Key (⌃⌥⇧⌘)",
-                        "manipulators": [{
-                            "conditions": [{
-                                "identifiers": [{
-                                        "vendor_id": 1452
-                                    },
+                        "manipulators": [
+                            {
+                                "conditions": [
                                     {
-                                        "vendor_id": 76
-                                    },
-                                    {
-                                        "is_built_in_keyboard": true
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "device_if"
-                            }],
-                            "description": "Spacebar -> Hyper Variable & Meh",
-                            "from": {
-                                "key_code": "spacebar",
-                                "modifiers": {
-                                    "optional": ["any"]
-                                }
-                            },
-                            "parameters": {
-                                "basic.to_if_alone_timeout_milliseconds": 200,
-                                "basic.to_if_held_down_threshold_milliseconds": 150
-                            },
-                            "to": [{
-                                "set_variable": {
-                                    "name": "hyper",
-                                    "value": 1
-                                }
-                            }],
-                            "to_after_key_up": [{
-                                "set_variable": {
-                                    "name": "hyper",
-                                    "value": 0
-                                }
-                            }],
-                            "to_if_alone": [{
-                                "key_code": "spacebar"
-                            }],
-                            "to_if_held_down": [{
-                                "key_code": "left_option",
-                                "modifiers": ["left_shift", "left_control"]
-                            }],
-                            "type": "basic"
-                        }]
+                                "description": "Spacebar -> Hyper Variable & Meh",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 200,
+                                    "basic.to_if_held_down_threshold_milliseconds": 150
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_option",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
-                        "manipulators": [{
-                            "conditions": [{
-                                "identifiers": [{
-                                        "vendor_id": 1452
-                                    },
+                        "manipulators": [
+                            {
+                                "conditions": [
                                     {
-                                        "vendor_id": 76
-                                    },
-                                    {
-                                        "is_built_in_keyboard": true
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "device_if"
-                            }],
-                            "description": "[Mac]Capslock -> esc & ctrl",
-                            "from": {
-                                "key_code": "caps_lock",
-                                "modifiers": {
-                                    "optional": ["any"]
-                                }
-                            },
-                            "parameters": {
-                                "basic.to_if_alone_timeout_milliseconds": 150,
-                                "basic.to_if_held_down_threshold_milliseconds": 150
-                            },
-                            "to_if_alone": [{
-                                "key_code": "escape"
-                            }],
-                            "to_if_held_down": [{
-                                "key_code": "left_control"
-                            }],
-                            "type": "basic"
-                        }]
+                                "description": "[Mac]Capslock -> esc & ctrl",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 150,
+                                    "basic.to_if_held_down_threshold_milliseconds": 150
+                                },
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
-                        "manipulators": [{
-                            "conditions": [{
-                                "identifiers": [{
-                                        "vendor_id": 1452
-                                    },
+                        "manipulators": [
+                            {
+                                "conditions": [
                                     {
-                                        "vendor_id": 76
-                                    },
-                                    {
-                                        "is_built_in_keyboard": true
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
-                                "type": "device_if"
-                            }],
-                            "description": "[Mac]' -> ' & hyper",
-                            "from": {
-                                "key_code": "quote",
-                                "modifiers": {
-                                    "optional": ["any"]
-                                }
-                            },
-                            "parameters": {
-                                "basic.to_if_alone_timeout_milliseconds": 150,
-                                "basic.to_if_held_down_threshold_milliseconds": 150
-                            },
-                            "to_if_alone": [{
-                                "key_code": "quote"
-                            }],
-                            "to_if_held_down": [{
-                                "key_code": "left_control",
-                                "modifiers": ["left_shift", "left_command", "left_option"]
-                            }],
-                            "type": "basic"
-                        }]
+                                "description": "[Mac]' -> ' & hyper",
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 150,
+                                    "basic.to_if_held_down_threshold_milliseconds": 150
+                                },
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "quote"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "[Mac]Left/right cmd to delete",
-                        "manipulators": [{
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "Change right command to delete | right command",
                                 "from": {
                                     "key_code": "right_command",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
                                     "basic.to_if_alone_timeout_milliseconds": 150,
                                     "basic.to_if_held_down_threshold_milliseconds": 150
                                 },
-                                "to_if_alone": [{
-                                    "key_code": "delete_or_backspace"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "right_command"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "Change left command to delete | left command",
                                 "from": {
                                     "key_code": "left_command",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
                                     "basic.to_if_alone_timeout_milliseconds": 150,
                                     "basic.to_if_held_down_threshold_milliseconds": 150
                                 },
-                                "to_if_alone": [{
-                                    "key_code": "delete_or_backspace",
-                                    "modifiers": ["fn"]
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "left_command"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "fn"
+                                        ]
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "[CORNE]Hyper Key sublayer \"z\", for Arc tab control",
-                        "manipulators": [{
+                        "manipulators": [
+                            {
                                 "conditions": [],
                                 "description": "Toggle Hyper sublayer z",
                                 "from": {
                                     "key_code": "z",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -740,121 +973,175 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "z"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "z"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "z"
-                                }],
-                                "to_if_held_down": [{
-                                    "set_variable": {
-                                        "key_up_value": 0,
-                                        "name": "hyper_sublayer_z",
-                                        "value": 1
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "z"
                                     }
-                                }],
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "set_variable": {
+                                            "key_up_value": 0,
+                                            "name": "hyper_sublayer_z",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "open_bracket",
-                                    "modifiers": ["left_shift", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "close_bracket",
-                                    "modifiers": ["left_shift", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "left_arrow",
-                                    "modifiers": ["left_control", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "right_arrow",
-                                    "modifiers": ["left_control", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Move to Space 1 in Arc",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "1",
-                                    "modifiers": ["left_control", "left_option"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "[MAC]Hyper Key sublayer \"w\", for Raycast Window-Management",
-                        "manipulators": [{
-                                "conditions": [{
-                                        "identifiers": [{
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -867,7 +1154,8 @@
                                         "type": "device_if"
                                     },
                                     {
-                                        "identifiers": [{
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -884,7 +1172,9 @@
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -892,26 +1182,34 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "w"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "w"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "w"
-                                }],
-                                "to_if_held_down": [{
-                                    "set_variable": {
-                                        "key_up_value": 0,
-                                        "name": "hyper_sublayer_w",
-                                        "value": 1
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "w"
                                     }
-                                }],
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "set_variable": {
+                                            "key_up_value": 0,
+                                            "name": "hyper_sublayer_w",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -933,17 +1231,23 @@
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/maximize"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/maximize"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -965,17 +1269,23 @@
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/center"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/center"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -997,17 +1307,23 @@
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1029,17 +1345,23 @@
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1061,17 +1383,23 @@
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/top-left-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/top-left-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1093,17 +1421,23 @@
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-left-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-left-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1125,17 +1459,23 @@
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/top-right-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/top-right-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1157,17 +1497,23 @@
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-right-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-right-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1189,17 +1535,23 @@
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-left"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-left"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1221,17 +1573,23 @@
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-right"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-right"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1253,17 +1611,23 @@
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-up"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-up"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 1452
                                             },
                                             {
@@ -1285,53 +1649,72 @@
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-down"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-down"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "[CORNE]Hyper Key sublayer \"w\", for Raycast Window-Management",
-                        "manipulators": [{
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 7504
-                                        },
-                                        {
-                                            "is_built_in_keyboard": false
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 7504
+                                            },
+                                            {
+                                                "is_built_in_keyboard": false
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "description": "Toggle Hyper sublayer w",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
-                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"]
+                                        "mandatory": [
+                                            "left_control",
+                                            "left_shift",
+                                            "left_option",
+                                            "left_command"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_w",
-                                        "value": 1
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_w",
+                                            "value": 1
+                                        }
                                     }
-                                }],
-                                "to_after_key_up": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_w",
-                                        "value": 0
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_w",
+                                            "value": 0
+                                        }
                                     }
-                                }],
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1350,17 +1733,23 @@
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/maximize"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/maximize"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1379,17 +1768,23 @@
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/center"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/center"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1408,17 +1803,23 @@
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/previous-display"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/previous-display"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1437,17 +1838,23 @@
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1466,17 +1873,23 @@
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1495,17 +1908,23 @@
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/top-left-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/top-left-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1524,17 +1943,23 @@
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-left-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-left-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1553,17 +1978,23 @@
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/top-right-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/top-right-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1582,17 +2013,23 @@
                                 "from": {
                                     "key_code": "period",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-right-quarter"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-right-quarter"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1611,17 +2048,23 @@
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-left"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-left"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1640,17 +2083,23 @@
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-right"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-right"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1669,17 +2118,23 @@
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-up"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-up"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                        "identifiers": [{
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
                                                 "vendor_id": 7504
                                             },
                                             {
@@ -1698,52 +2153,66 @@
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-down"
-                                }],
+                                "to": [
+                                    {
+                                        "shell_command": "open -g raycast://extensions/raycast/window-management/move-down"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "Hyper Key sublayer \"x\", for Raycast Extensions",
-                        "manipulators": [{
-                                "conditions": [
-
-
-                                ],
+                        "manipulators": [
+                            {
+                                "conditions": [],
                                 "description": "Toggle Hyper sublayer x",
                                 "from": {
                                     "key_code": "x",
                                     "modifiers": {
-                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"]
+                                        "mandatory": [
+                                            "left_control",
+                                            "left_shift",
+                                            "left_option",
+                                            "left_command"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_x",
-                                        "value": 1
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_x",
+                                            "value": 1
+                                        }
                                     }
-                                }],
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Json formattor",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "open -g raycast://extensions/destiner/json-format/formatClipboard"
                                     },
                                     {
@@ -1756,19 +2225,24 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Dictionary",
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "open -g raycast://extensions/raycast/dictionary/define-word"
                                     },
                                     {
@@ -1781,19 +2255,24 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "ByteDance Log",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "open -g raycast://extensions/chyroc/bytedance-raycast-tools/log_query"
                                     },
                                     {
@@ -1806,19 +2285,24 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Caffeinated",
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "open -g raycast://extensions/mooxl/coffee/caffeinateToggle"
                                     },
                                     {
@@ -1831,19 +2315,24 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open downloads folder",
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "open /Users/bytedance/downloads"
                                     },
                                     {
@@ -1856,19 +2345,24 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Link cleaner",
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "open -g raycast://extensions/MisakiCoca/link-cleaner/main"
                                     },
                                     {
@@ -1881,19 +2375,24 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Run dnd",
                                 "from": {
                                     "key_code": "x",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "shortcuts run focus"
                                     },
                                     {
@@ -1906,19 +2405,24 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open vpaas",
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [{
+                                "to": [
+                                    {
                                         "shell_command": "open -g raycast://extensions/dai_yingchao/vpaas/vpaas"
                                     },
                                     {
@@ -1931,239 +2435,367 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_x",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_x",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Reset Variable",
                                 "from": {
                                     "any": "key_code"
                                 },
-                                "to": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_x",
-                                        "value": 0
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_x",
+                                            "value": 0
+                                        }
                                     }
-                                }],
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "Hyper Key sublayer \"z\", for Arc tab control",
-                        "manipulators": [{
+                        "manipulators": [
+                            {
                                 "conditions": [],
                                 "description": "Toggle Hyper sublayer z",
                                 "from": {
                                     "key_code": "z",
                                     "modifiers": {
-                                        "mandatory": ["left_control", "left_shift", "left_option", "left_command"]
+                                        "mandatory": [
+                                            "left_control",
+                                            "left_shift",
+                                            "left_option",
+                                            "left_command"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_z",
-                                        "value": 1
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_z",
+                                            "value": 1
+                                        }
                                     }
-                                }],
-                                "to_after_key_up": [{
-                                    "set_variable": {
-                                        "name": "hyper_sublayer_z",
-                                        "value": 0
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_sublayer_z",
+                                            "value": 0
+                                        }
                                     }
-                                }],
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "open_bracket",
-                                    "modifiers": ["left_shift", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "close_bracket",
-                                    "modifiers": ["left_shift", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "left_arrow",
-                                    "modifiers": ["left_control", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "right_arrow",
-                                    "modifiers": ["left_control", "left_command"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Move to Space 1 in Arc",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "1",
-                                    "modifiers": ["left_control", "left_option"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Move to Space 2 in Arc",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "2",
-                                    "modifiers": ["left_control", "left_option"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Move to Space 3 in Arc",
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "3",
-                                    "modifiers": ["left_control", "left_option"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Move to Space 4 in Arc",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "4",
-                                    "modifiers": ["left_control", "left_option"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "name": "hyper_sublayer_z",
-                                    "type": "variable_if",
-                                    "value": 1
-                                }],
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_z",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Move to Space 5 in Arc",
                                 "from": {
                                     "key_code": "quote",
                                     "modifiers": {
-                                        "mandatory": ["left_shift", "left_command", "left_control", "left_option"]
+                                        "mandatory": [
+                                            "left_shift",
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 },
-                                "to": [{
-                                    "key_code": "5",
-                                    "modifiers": ["left_control", "left_option"]
-                                }],
+                                "to": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
                         "description": "[Mac]homerow mod",
-                        "manipulators": [{
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2171,37 +2803,48 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "f"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "f"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "f"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "left_command"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "f"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2209,37 +2852,48 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "j"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "j"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "j"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "right_command"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "j"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2247,37 +2901,48 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "d"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "d"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "d"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "left_control"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "d"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2285,37 +2950,48 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "k"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "k"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "k"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "right_control"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "k"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "right_control"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2323,37 +2999,48 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "s"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "s"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "s"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "left_option"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "s"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_option"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2361,37 +3048,48 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "l"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "l"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "l"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "right_option"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "l"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "right_option"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2399,37 +3097,48 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "a"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "a"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "a"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "left_shift"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "a"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "identifiers": [{
-                                            "vendor_id": 1452
-                                        },
-                                        {
-                                            "vendor_id": 76
-                                        },
-                                        {
-                                            "is_built_in_keyboard": true
-                                        }
-                                    ],
-                                    "type": "device_if"
-                                }],
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 1452
+                                            },
+                                            {
+                                                "vendor_id": 76
+                                            },
+                                            {
+                                                "is_built_in_keyboard": true
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "semicolon",
                                     "modifiers": {
-                                        "optional": ["any"]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
                                 "parameters": {
@@ -2437,34 +3146,43 @@
                                     "basic.to_if_held_down_threshold_milliseconds": 250
                                 },
                                 "to_delayed_action": {
-                                    "to_if_canceled": [{
-                                        "key_code": "semicolon"
-                                    }]
+                                    "to_if_canceled": [
+                                        {
+                                            "key_code": "semicolon"
+                                        }
+                                    ]
                                 },
-                                "to_if_alone": [{
-                                    "halt": true,
-                                    "key_code": "semicolon"
-                                }],
-                                "to_if_held_down": [{
-                                    "key_code": "right_shift"
-                                }],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "semicolon"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     }
                 ]
             },
-            "devices": [{
+            "devices": [
+                {
                     "identifiers": {
                         "is_keyboard": true,
                         "product_id": 835,
                         "vendor_id": 1452
                     },
-                    "simple_modifications": [{
+                    "simple_modifications": [
+                        {
                             "from": {
                                 "key_code": "left_shift"
                             },
-                            "to": [{
+                            "to": [
+                                {
                                     "sticky_modifier": {
                                         "left_shift": "toggle"
                                     }
@@ -2478,7 +3196,8 @@
                             "from": {
                                 "key_code": "right_shift"
                             },
-                            "to": [{
+                            "to": [
+                                {
                                     "sticky_modifier": {
                                         "right_shift": "toggle"
                                     }
@@ -2494,11 +3213,13 @@
                     "identifiers": {
                         "is_keyboard": true
                     },
-                    "simple_modifications": [{
+                    "simple_modifications": [
+                        {
                             "from": {
                                 "key_code": "left_shift"
                             },
-                            "to": [{
+                            "to": [
+                                {
                                     "sticky_modifier": {
                                         "left_shift": "toggle"
                                     }
@@ -2512,7 +3233,8 @@
                             "from": {
                                 "key_code": "right_shift"
                             },
-                            "to": [{
+                            "to": [
+                                {
                                     "sticky_modifier": {
                                         "right_shift": "toggle"
                                     }
@@ -2534,37 +3256,46 @@
         },
         {
             "name": "Nothing",
-            "simple_modifications": [{
+            "simple_modifications": [
+                {
                     "from": {
                         "key_code": "left_control"
                     },
-                    "to": [{
-                        "key_code": "left_option"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "left_option"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "left_option"
                     },
-                    "to": [{
-                        "key_code": "left_control"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "left_control"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "right_control"
                     },
-                    "to": [{
-                        "key_code": "right_option"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "right_option"
+                        }
+                    ]
                 },
                 {
                     "from": {
                         "key_code": "right_option"
                     },
-                    "to": [{
-                        "key_code": "right_control"
-                    }]
+                    "to": [
+                        {
+                            "key_code": "right_control"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {
