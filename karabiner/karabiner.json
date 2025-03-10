@@ -1152,20 +1152,6 @@
                                             }
                                         ],
                                         "type": "device_if"
-                                    },
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 1452
-                                            },
-                                            {
-                                                "vendor_id": 76
-                                            },
-                                            {
-                                                "is_built_in_keyboard": true
-                                            }
-                                        ],
-                                        "type": "device_if"
                                     }
                                 ],
                                 "description": "Toggle Hyper sublayer w",
