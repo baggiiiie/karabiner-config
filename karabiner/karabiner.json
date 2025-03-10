@@ -4,20 +4,27 @@
     },
     "profiles": [{
             "complex_modifications": {
-                "rules": [{
+                "rules": [
+                    {
                         "description": "[CORNE]fix mac ctrl-space issue",
-                        "manipulators": [{
-                            "from": {
-                                "key_code": "spacebar",
-                                "modifiers": {
-                                    "mandatory": ["right_control"]
-                                }
-                            },
-                            "to": [{
-                                "key_code": "fn"
-                            }],
-                            "type": "basic"
-                        }]
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "fn"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     },
                     {
                         "description": "[MAC]Hyper Key sublayer \"z\", for Arc tab control",
